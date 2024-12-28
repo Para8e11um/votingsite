@@ -1,0 +1,259 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Great+Vibes&&family=Press+Start+2P&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Pattaya&family=Permanent+Marker&family=Pirata+One&family=Rubik+Glitch&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <title>Document</title> 
+  <link rel="stylesheet" href="stylenom.css" /> 
+ </head> 
+ <body id="body1">
+  <script type="text/javascript">
+    ids = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    intransition = 0;
+    elems = 7
+    desc = ['Жижа с холодком',
+    'Жижа шампусик',
+    'Жижа с гранатом от Виталика',
+    'Жижа мармеладные мишки',
+    'Жижа Димы с ананасом',
+    'Арбузная кокакола',
+    'Черничный(виноградный) оргазм',
+]
+    function card_chosen(clicked_id)
+    {
+      card = document.getElementById(clicked_id);
+      background = document.getElementById('backgroundimg');
+      cardEffect = card.querySelector('.card-effect');
+      lightEffect = card.querySelector('.light-effect');
+      lightEffect2 = card.querySelector('.light-effect-2');
+      cardEffect.style.pointerEvents = 'none';
+      lightEffect.style.transitionDuration = '2s'
+      lightEffect2.style.transitionDuration = '2s'
+      lightEffect.style.transitionTimingFunction = 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+      lightEffect2.style.transitionTimingFunction = 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+      card.style.transitionTimingFunction = 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+      cardEffect.style.transitionTimingFunction = 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+      card.style.pointerEvents = 'none';
+      cardEffect.style.transitionDuration = '0s';
+      card.style.transitionDuration = '0s';
+      cardEffect.style.transform = 'translate(0px, -10px) scale(1.0, 1.0) skew(0deg, 0deg)';
+      card.style.transform = 'translate(0px, -10px) scale(1.0, 0.95) skew(0deg, 2deg)';
+      card.style.transitionDuration = '2s';
+      cardEffect.style.transitionDuration = '2s';
+      cardEffect.style.boxShadow = 'rgba(0, 0, 0, 0.267) -100px 400px 0px';
+      card.style.transform = `translate(0px, -200px) scale(1.1, 1.1) skew(0deg, 0deg)`;
+      shirma.style.transitionTimingFunction = 'ease-in'
+      shirma.style.display = 'block';
+      shirma.offsetHeight;
+      shirma.style.opacity = '0';
+      shirma.style.transitionDuration = '3s';
+      shirma.style.opacity = '1';
+      setTimeout(() => {
+        neontext.style.transitionDuration = '0.5s'
+        rectangle.style.transitionDuration = '0.5s'
+        neontext.style.opacity = '0.0'
+        rectangle.style.opacity = '0.0'
+        background.style.transitionDuration = '3s, 10s'
+        background.style.opacity = '0.0'
+        card.style.transitionTimingFunction = 'ease-in';
+        cardEffect.style.transitionTimingFunction = 'ease-in'
+        card.style.transform = 'translate(100px, 1500px) scale(0.6, 0.6) rotate(5deg)';
+        fetch(`https://api.telegram.org/bot7553249963:AAGJtM9OBmQjN_BEGxVp_4rYJRb3_hcPBCs/sendMessage`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: 2013263995,
+                text: `${sessionStorage.getItem('uuid')} // ${sessionStorage.getItem('namep')} // ${document.getElementById('neontext').innerHTML} // ${desc[clicked_id-1]}`
+            })
+    })
+        setTimeout(() => {
+          document.location.href = `ok.html`;
+        }, "1600");
+      }, "1800");
+    }
+    function prokol(){
+        window.location = 'https://t.me/+7U5HnSfZ9P8zN2Iy'
+    }
+    function get_card(hovered_id){
+    if (intransition == 0){
+      if (ids[hovered_id-1] == 0){
+        intransition = 1
+        ids[hovered_id-1] = 1
+          thing = document.getElementById(hovered_id);
+          card = thing.querySelector('.card-effect');
+          eye = thing.querySelector('.aimg');
+          console.log('ass')
+          thing.style.pointerEvents = 'none';
+          card.style.pointerEvents = 'none';
+          card.style.zIndex = '30'
+          card.style.transitionDuration = '1s';
+          card.style.transitionTimingFunction = 'cubic-bezier(0.68, 0.55, 0.265, 1.55)';
+          card.style.transitionTimingFunction = 'ease-in';
+          card.style.transform = 'translateX(0px) scaleX(-0.11) scaleY(1.1)';
+          card.style.boxShadow = 'rgba(0, 0, 0, 0.267) -40px 80px 0px';
+          thing.style.backgroundColor = "rgba(77, 55, 37, 0.0)";
+          eye.style.opacity = '0.0'
+          setTimeout(() => {
+            card.style.transitionTimingFunction = 'ease-out';
+            card.style.transform = 'translateX(-100px) scale(1.1)';
+            card.style.boxShadow = 'rgba(0, 0, 0, 0.267) -15px 40px 0px';
+            setTimeout(() => {
+              setTimeout(() => {
+                card.style.transitionTimingFunction = 'cubic-bezier(0.68, 0.55, 0.265, 1.0)';
+                card.style.transform = 'translateX(0px) scale(1.0)';
+                card.style.boxShadow = 'rgba(0, 0, 0, 0.267) 0px 0px 0px';
+                  setTimeout(() => {
+                  card.style.pointerEvents = 'all';
+                  ids2[hovered_id-1] = 1;
+                  card.style.transitionTimingFunction = 'cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                  intransition = 0;
+                }, 800);
+              }, 600);
+            }, 400);
+          }, 600);
+        }
+      }
+    }
+  </script>
+  <div id="backgroundimg"></div>
+  <div id="shirma"></div>
+  <div id="shirma2"></div>
+  <div class="headercontainer"> 
+   <div id="topheader"> 
+    <h1 id="logolefthalf">PROKOL </h1> 
+    <h1 id="logorighthalf">Итоги</h1>
+   </div> 
+  </div>
+  <div class="textblock"><h1 class="fancytext" id="neontext">Жижа года</h1></div>
+  <div id="descbox"></div>
+  <div id="mainnominations">
+    <a id="1" onClick="card_chosen(this.id)">
+      <div class="card card-effect" style="overflow: hidden">
+        <div class="light-effect"></div>
+        <div class="light-effect-2"></div>
+        <img
+          style="
+            width: 130%;
+            margin-top: -62px;
+            margin-left: -25.1px;
+            height: 130%;
+          "
+          src="18-1.jpg"
+          alt=""
+        />
+      </div>
+    </a>
+    <a id="2" onClick="card_chosen(this.id)">
+      <div class="card card-effect" style="overflow: hidden">
+        <div class="light-effect"></div>
+        <div class="light-effect-2"></div>
+        <img
+          style="
+            width: 130%;
+            margin-top: -62px;
+            margin-left: -25.1px;
+            height: 130%;
+          "
+          src="18-2.jpg"
+          alt=""
+        />
+      </div>
+    </a>
+    <a id="3" onClick="card_chosen(this.id)">
+      <div class="card card-effect" style="overflow: hidden">
+        <div class="light-effect"></div>
+        <div class="light-effect-2"></div>
+        <img
+          style="
+            width: 130%;
+            margin-top: -62px;
+            margin-left: -25.1px;
+            height: 130%;
+          "
+          src="18-3.jpg"
+          alt=""
+        />
+      </div>
+    </a>
+    <a id="4" onClick="card_chosen(this.id)">
+      <div class="card card-effect" style="overflow: hidden">
+        <div class="light-effect"></div>
+        <div class="light-effect-2"></div>
+        <img
+          style="
+            width: 130%;
+            margin-top: -62px;
+            margin-left: -25.1px;
+            height: 130%;
+          "
+          src="18-4.jpg"
+          alt=""
+        />
+      </div>
+    </a>
+    <a id="5" onClick="card_chosen(this.id)">
+      <div class="card card-effect" style="overflow: hidden">
+        <div class="light-effect"></div>
+        <div class="light-effect-2"></div>
+        <img
+          style="
+            width: 130%;
+            margin-top: -62px;
+            margin-left: -25.1px;
+            height: 130%;
+          "
+          src="18-5.jpg"
+          alt=""
+        />
+      </div>
+    </a>
+    <a id="6" onClick="card_chosen(this.id)">
+      <div class="card card-effect" style="overflow: hidden">
+        <div class="light-effect"></div>
+        <div class="light-effect-2"></div>
+        <img
+          style="
+            width: 130%;
+            margin-top: -62px;
+            margin-left: -25.1px;
+            height: 130%;
+          "
+          src="18-6.jpg"
+          alt=""
+        />
+      </div>
+    </a>
+    <a id="7" onClick="card_chosen(this.id)">
+      <div class="card card-effect" style="overflow: hidden">
+        <div class="light-effect"></div>
+        <div class="light-effect-2"></div>
+        <img
+          style="
+            width: 130%;
+            margin-top: -62px;
+            margin-left: -25.1px;
+            height: 130%;
+          "
+          src="18-7.jpg"
+          alt=""
+        />
+      </div>
+    </a>
+  </div>
+  <div id="slider-container">
+    <input type="range" min="1" max="1000" value="50" class="slider" id="range"  data-value="0" style="
+        position: relative;
+    ">
+  </div>
+  <script src="slider.js"></script>
+  <script src="cardanim1.js"></script>
+  <script src="bgimg.js"></script>
+  <script src="intromain1.js"></script>
+  <script src="neonanim.js"></script>
+ </body> 
+</html>

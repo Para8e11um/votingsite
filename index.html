@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Great+Vibes&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Pattaya&family=Permanent+Marker&family=Pirata+One&family=Rubik+Glitch&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <title>Document</title> 
+  <link rel="stylesheet" href="indexstyle.css" /> 
+ </head>
+ <body>
+    <script type="text/javascript">
+        ipadr = '1';
+        document.addEventListener("DOMContentLoaded", function() {
+        fetch("https://ipinfo.io/json")
+            .then(response => response.json())
+            .then(data => {
+                    ipadr = data.ip;
+                    sessionStorage.setItem("uuid", `${ipadr}-${Date.now() + Math.random()}`);
+                    console.log(sessionStorage.getItem("uuid"))
+                })
+                .catch(error => {
+                    console.error("Error fetching IP address:", error);
+                });
+            })
+        function ticket_clicked()
+        {
+            sel = 1;
+            sel3 = 1;
+            if (sel2 == 0){
+                document.getElementById('ticket').style.transitionDuration = '1s'
+                document.getElementById('textblock').style.transitionDuration = '3s'
+                document.getElementById('ticket').style.transform = 'rotate(0deg) translateY(0px) scale(1.1)'
+                document.getElementById('textblock').style.transform = 'rotate(0deg) translateY(-200px) scale(1.1)'
+                document.getElementById('ticketshadow').style.boxShadow = 'rgba(248, 230, 215, 0.9) 0px 25px 100px'
+            }
+        }
+        function acception()
+        {
+            document.getElementById('underticketbox').style.opacity = '0.0'
+            document.getElementById('inputname').contentEditable = "false"
+            document.getElementById('ticketshadow').style.transitionDuration = '0.1s'
+            document.getElementById('ticketshadow').style.boxShadow = 'rgba(248, 230, 215, 0.9) 0px 25px 400px'
+            setTimeout(() => {
+                    document.getElementById('ticketshadow').style.transitionDuration = '3s'
+                    document.getElementById('ticketshadow').style.boxShadow = 'rgba(248, 230, 215, 0.0) 0px 25px 100px'
+                    acceptPressed = 1;
+                    setTimeout(() => {
+                        document.getElementById('ticket').style.transitionDuration = '6s'
+
+                        document.getElementById('ticket').style.transform = 'scale(0.1) translate(0px, 26px) skew(-33deg, -32deg)'
+                        document.getElementById('ticket').style.opacity = '0.0'
+                        setTimeout(() => {
+                            var xxx = document.getElementById('inputname').innerHTML
+                            sessionStorage.setItem("namep", `${xxx}`);
+                            document.location.href = `ok.html`;
+                        }, 5500);
+                    }, 3850);
+                }, 200);
+        }
+      </script>
+    <div id="shirma">
+        <div id="logocontainer">
+            <div id="prokoltopline"></div>
+            <div id="prokol">
+                <div id="prokolimg"></div>
+                <div id="prokoltext">prokol</div>
+            </div>
+            <div id="prokolbottomline"></div>
+        </div>
+    </div>
+    <div id="textblock"><h1 class="fancytext">Введите ваше имя</h1></div>
+    <form>    
+        <div id="ticket" onclick="ticket_clicked()">
+            <div id="ticketshadow"></div>
+            <div contenteditable="true" id="inputname"></div>
+            <div id="underticketbox">
+                <div id="alert">
+                    <div id='alertsymbol'></div>
+                    <div id='alerttext'>Имя выбирается окончательно<br>Любые голоса за себя/родственников/принадлежащие вам вещи засчитываться не будут<br>Указывайте своё настоящее имя и фамилию</div>
+                    <div id="alert1"></div>
+                    <div id="alert2"></div>
+                </div>
+                <div id="accept">
+                    <div id="accept1" onclick="acception()"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="intro.js"></script>
+ </body>

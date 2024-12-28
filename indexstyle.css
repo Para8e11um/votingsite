@@ -1,0 +1,276 @@
+@font-face { 
+    font-family: "DisruptorsScriptRegular";
+    src: url("fonts/DisruptorsScriptRegular/DisruptorsScriptRegular.eot");
+    src: url("fonts/DisruptorsScriptRegular/DisruptorsScriptRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/DisruptorsScriptRegular/DisruptorsScriptRegular.woff") format("woff"),
+    url("fonts/DisruptorsScriptRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+body { 
+    background-color: rgb(5, 5, 5); 
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    overflow-anchor: none;
+    margin: 0px;
+    height: 100%; 
+    overflow: hidden;
+    transition-duration: 0.1s;
+    width: 100%;
+   }
+#shirma {
+    z-index: 50;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(5, 5, 5); 
+    transition-duration: 4s;
+    transition-timing-function:cubic-bezier(0.77, 0, 0.175, 1)
+}
+#logocontainer{
+    width: 300px;
+    height: 240px;
+    display: flex;
+    margin: auto;
+    margin-top: 15%;
+}
+#prokol {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    width: 260px;
+    height: 60px;
+    transition-duration: 3s;
+    transition-timing-function:cubic-bezier(0.5, 0.9, 0.9, 0.5);
+    transform: translateY(120px);
+    margin:auto;
+    margin-top:60px;
+}
+#prokolbottomline {
+    z-index: 12;
+    position: absolute;
+    display: flex;
+    width: 260px;
+    height: 100px;
+    margin-left: 0px;
+    margin-top: 160px;
+    background-color: rgb(5, 5, 5);
+}
+#prokoltopline {
+    z-index: 12;
+    position: absolute;
+    display: flex;
+    width: 260px;
+    height: 100px;
+    margin-left: 0px;
+    margin-top: -70px;
+    background-color: rgb(5, 5, 5);
+}
+#prokoltext {
+    z-index: 5;
+    display: flex;
+    text-align: center;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color:rgb(255, 251, 240);
+    font-size: 3rem;
+    margin: auto;
+    text-shadow: rgba(248, 230, 215, 0.541) 0px 2px 5px;
+}
+#prokolimg {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    border-style:solid;
+    border-color: rgb(255, 251, 240);
+    border-width: 3px;
+    margin: auto;
+    margin-bottom: -10px;
+    background-image: url(prokollogo.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#textblock {
+    display: flex;
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-content: center;
+    justify-content: center;
+    transform-origin: 50% 50%;
+    transition-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition-duration: 4s;
+}
+.fancytext {
+    font-family: "Rubik Mono One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(245, 245, 245, 0.247);
+    font-size: 5.0rem;
+    text-align: center;
+}
+#ticket {
+    z-index: 15;
+    display: flex;
+    width: 596px;
+    height: 259px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-content: center;
+    justify-content: center;
+    background-image: url(ticket1.png);
+    background-size: cover;
+    transform-origin: 50% 50%;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition-duration: 4s;
+    cursor: pointer;
+}
+#inputname{
+    display: flex;
+    height:30px;
+    width: 300px;
+    margin-top: 180px;
+    margin-left: 140px;
+    font-family: "DisruptorsScriptRegular", serif;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+    outline: none;
+}
+#ticketshadow {
+    z-index: 12;
+    display: flex;
+    height: 90%;
+    width: 90%;
+    position:absolute;
+    margin: auto;
+    box-shadow: rgba(248, 230, 215, 0.541) 0px 25px 100px;
+    transition-duration: 0.2s;
+}
+#underticketbox {
+    z-index: 10;
+    display:flex;
+    position: absolute;
+    width: 596px;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -80px;
+    margin-right: auto;
+    margin-left: auto;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+#alert {
+    z-index: 9;
+    display: flex;
+    width: 500px;
+    background-color: rgba(105, 105, 105, 0.322);
+    border-color: rgba(255, 251, 240, 0.87);
+    border-style: solid;
+    border-width: 2px;
+    height: 60px;
+    margin-bottom: -616px;
+    margin-left: 0px;
+    transition-duration: 4s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#alertsymbol {
+    z-index: 9;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    background-image: url(alert.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#alerttext {
+    z-index: 9;
+    display: flex;
+    font-family: "Rubik Mono One", serif;
+    font-weight: 200;
+    font-style: normal;
+    color: rgba(255, 251, 240, 0.897);
+    font-size: 0.65rem;
+    text-align: left;
+    width: 400px;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    text-justify: distribute-all-lines;
+}
+#accept {
+    z-index: 9;
+    display: flex;
+    width: 60px;
+    background-color: rgba(255, 251, 240, 0.897);
+    height: 64px;
+    margin-bottom: -616px;
+    margin-left: 20px;
+    background-image: url(checkmark.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 4s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    opacity: 0.0;
+    cursor: pointer;
+}
+#alert1 {
+    margin-left: -4px;
+    margin-top: -4px;
+    position: absolute;
+    display: flex;
+    width: 508px;
+    z-index: 10;
+    background-color: rgb(5, 5, 5);
+    height: 68px;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform-origin: 100% 50%;
+}
+#alert2 {
+    margin-left: -3px;
+    margin-top: -2px;
+    position: absolute;
+    display: flex;
+    width: 506px;
+    z-index: 9;
+    background-color: rgba(255, 251, 240);
+    height: 62px;
+    transition-duration: 1.8s;
+    transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: 100% 50%;
+}
+#accept1 {
+    z-index: 9;
+    display: flex;
+    width: 60px;
+    background-color: rgba(255, 251, 240, 0.897);
+    height: 64px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    background-color: rgba(255, 251, 240);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    box-shadow: rgba(248, 230, 215, 0) 0px 0px 50px;
+    opacity: 0.0;
+}
+#accept1:hover{
+    opacity: 0.5;
+    box-shadow: rgba(248, 230, 215, 0.541) 0px 0px 50px;
+}
